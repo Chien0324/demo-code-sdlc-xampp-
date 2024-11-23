@@ -1,0 +1,143 @@
+/* Cấu hình chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container chứa form */
+.container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề của form */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Các label trong form */
+label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Các input trong form */
+input[type="text"], input[type="number"], input[type="time"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Tạo hiệu ứng cho input khi focus */
+input[type="text"]:focus, input[type="number"]:focus, input[type="time"]:focus, input[type="date"]:focus {
+    border-color: #6c6cff;
+    outline: none;
+}
+
+/* Nút submit */
+button[type="submit"] {
+    background-color: #6c6cff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Hiệu ứng hover cho nút submit */
+button[type="submit"]:hover {
+    background-color: #5a5ae6;
+}
+
+/* Đường dẫn "Manage" */
+p.text-center {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+p.text-center a {
+    color: #6c6cff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Đổi màu của đường dẫn khi hover */
+p.text-center a:hover {
+    color: #4a4ae6;
+}
+
+/* Thiết lập độ rộng cho các trường nhập ngày tháng năm */
+input[type="number"] {
+    width: 30%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="number"]:nth-child(3) {
+    width: 60%;
+}
+
+/* Đảm bảo rằng các trường input trong .input-group sẽ hiển thị trên cùng một hàng */
+.input-group {
+    display: flex;
+    justify-content: space-between; /* Căn giữa các input */
+    gap: 10px; /* Khoảng cách giữa các input */
+}
+
+/* Đảm bảo rằng các trường input có chiều rộng hợp lý */
+.input-group .day,
+.input-group .month,
+.input-group .year {
+    width: 30%; /* Đặt chiều rộng cho từng input */
+}
+
+/* Các input có padding và margin hợp lý */
+input[type="number"], input[type="text"], input[type="time"] {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Khi focus vào input, đổi màu nền */
+input:focus {
+    outline: none;
+    border-color: #6c6cff;
+    background-color: #f0f8ff;
+}
+
+
+/* Đảm bảo rằng form và các thành phần trong form không bị cuộn ngang */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    input[type="text"], input[type="time"], input[type="number"], input[type="date"] {
+        width: 100%;
+    }
+}

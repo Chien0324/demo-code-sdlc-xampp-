@@ -1,0 +1,95 @@
+/* Add_grade.css */
+
+/* Toàn bộ body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Container bao quanh form */
+.container {
+    width: 32%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    color: #0e0e0f;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Các trường nhập liệu */
+form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Các input và select */
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Focus khi click vào các trường */
+form input:focus, form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Nút submit */
+form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #167729;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Khi hover vào nút */
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Link "Manage" */
+p.text-center {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+p.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}

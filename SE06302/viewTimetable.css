@@ -1,0 +1,124 @@
+/* Basic reset for margin, padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Add New Grade Button */
+a[href="add_schedule.php"] {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+a[href="add_schedule.php"]:hover {
+    background-color: #45a049;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* Table header styling */
+th {
+    background-color: #333;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-right: 1px solid #ddd; /* Add right border to separate columns */
+}
+
+/* Table data cell styling */
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd; /* Add right border to separate columns */
+}
+
+/* Action buttons styling */
+td a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Edit button - Green */
+td a[href*="edit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td a[href*="edit"]:hover {
+    background-color: #45a049;
+}
+
+/* Delete button - Red */
+td a[href*="delete"] {
+    background-color: #f44336;
+    color: white;
+}
+
+td a[href*="delete"]:hover {
+    background-color: #e53935;
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Add New Grade Button */
+a[href="add_schedule.php"] {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+a[href="add_schedule.php"]:hover {
+    background-color: #0056b3;
+}
+
+/* First column left border to ensure no border in the first column */
+td:first-child, th:first-child {
+    border-left: 1px solid #ddd;
+}

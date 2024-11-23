@@ -1,0 +1,104 @@
+/* Edit_grade.css */
+
+/* Toàn bộ body */
+body {
+    background-image: url('https://blog.topcv.vn/wp-content/uploads/2020/09/cong-nghe-thong-tin-la-gi-tn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container chính */
+.container {
+    width: 32%;
+    margin: 50px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+h1 {
+    text-align: center;
+    color: #0e0e0e;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Các nhãn (label) */
+form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+/* Các trường nhập liệu (input, select) */
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Hiệu ứng khi focus vào trường */
+form input:focus, form select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Nút bấm (button) */
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng khi hover vào nút */
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Đoạn văn dưới form */
+p.text-center {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Link bên trong đoạn văn */
+p.text-center a {
+    color: #0fcbc4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hiệu ứng hover cho link */
+p.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

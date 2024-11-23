@@ -1,0 +1,91 @@
+/* Thiết lập cơ bản cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container bao bọc form */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề form */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Các trường input */
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="time"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="time"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Các ô chọn ngày tháng năm */
+.d-flex {
+    display: flex;
+    gap: 10px;
+}
+
+/* Nút submit */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Thông báo về liên kết quản lý */
+.text-center {
+    text-align: center;
+    font-size: 14px;
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Thêm không gian giữa các phần tử */
+.mb-3 {
+    margin-bottom: 20px;
+}

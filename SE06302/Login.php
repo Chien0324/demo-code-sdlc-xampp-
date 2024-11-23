@@ -68,8 +68,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } elseif ($profession == 'teacher') {
                 header("Location: Teacher.php");
                 exit(); // Đảm bảo script dừng lại tại đây
-            } elseif ($profession == 'manager') {
-                header("Location: Manager.php");
+            } elseif ($profession == 'manage') {
+                header("Location: Manage.php");
                 exit(); // Đảm bảo script dừng lại tại đây
             } else {
                 echo "<p class='error'>Nghề nghiệp không hợp lệ.</p>";

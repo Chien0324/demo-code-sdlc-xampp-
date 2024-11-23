@@ -1,0 +1,124 @@
+/* styles.css */
+
+/* Toàn bộ body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9;
+}
+
+/* Tiêu đề chính */
+h1 {
+    text-align: center;
+    color:#db13a1 ;
+    margin-top: 20px;
+}
+
+/* Nút hành động */
+a.btn, button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+a.btn:hover, button:hover {
+    background: #0056b3;
+}
+
+/* Nút xóa */
+a.btn.delete {
+    background: #dc3545;
+}
+
+a.btn.delete:hover {
+    background: #b02a37;
+}
+
+/* Bảng */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+/* Hàng tiêu đề */
+thead th {
+    background: #0a0a0a;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Dòng dữ liệu */
+tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Hàng xen kẽ */
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Hàng nổi bật khi di chuột */
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+/* Form */
+form {
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form select, form button {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form input:focus, form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+form button {
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #0056b3;
+}
