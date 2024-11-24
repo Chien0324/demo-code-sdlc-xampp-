@@ -167,7 +167,12 @@ CREATE TABLE listAttendance (
 -- Sample data insertion
 INSERT INTO listAttendance (user_id, course_id, schedule_id, attendance_date, status, note)
 VALUES
-(1, 101, 1001, '2024-11-20', 'Present', 'Attended without issues'),
-(2, 102, 1002, '2024-11-21', 'On time', 'Logged in late but accepted'),
-(3, 103, 1003, '2024-11-22', 'Present', NULL),
-(4, 104, 1004, '2024-11-23', 'On time', 'Traffic delay noted');
+    (1, 1, 1, 2, '2024-11-13', 'Present', ''),
+    (2, 2, 1, 2, '2024-11-13', 'Present', ''),
+    (3, 3, 1, 2, '2024-11-13', 'On time', ''),
+    (4, 4, 1, 2, '2024-11-13', 'Present', ''),
+    (5, 5, 1, 2, '2024-11-13', 'Present', ''),
+    (6, 6, 1, 2, '2024-11-13', 'On time',''),
+    (7, 7, 1, 2, '2024-11-13', 'Present', ''),
+    (8, 8, 1, 2, '2024-11-13', 'Present', ''),
+    (9, 9, 1, 2, '2024-11-13', 'Present', '');
