@@ -85,6 +85,9 @@
                     case 'attendance': 
                         include 'manageAttendance.php';
                         break;
+                    case 'listattendance': 
+                        include 'ListAttendance.php';
+                        break;
                 }
                 ?>
             </div>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Request List</h2>
-    <a href="add_request.php" class="btn">Add New Request</a>
+    
     <div class="container">
         <!-- Request list -->
         <table>

@@ -5,21 +5,15 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="?page=request" class="nav-link link-dark">Manage Request.</a>
+            <a href="?page=request" class="nav-link link-dark">Submit request</a>
         </li>
-            <a href="?page=students" class="nav-link link-dark">Manage Students.</a>
-        </li>
-        <li>
-            <a href="?page=courses" class="nav-link link-dark">Manage Courses.</a>
+            <a href="?page=courses" class="nav-link link-dark">Course</a>
         </li>
         <li>
-            <a href="?page=grades" class="nav-link link-dark">Manage Grades.</a>
+            <a href="?page=timetable" class="nav-link link-dark">Timetable</a>
         </li>
         <li>
-            <a href="?page=timetable" class="nav-link link-dark">View Timetable.</a>
-        </li>
-        <li>
-            <a href="?page=attendance" class="nav-link link-dark">Manage Attendance.</a>
+            <a href="?page=attendance" class="nav-link link-dark">Attendance.</a>
         </li>
         <li>
             <a href="?page=listattendance" class="nav-link link-dark">List Attendance.</a>

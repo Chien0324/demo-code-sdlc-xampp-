@@ -133,7 +133,6 @@ VALUES
 
 
 
-
 CREATE TABLE requests (
     id INT AUTO_INCREMENT PRIMARY KEY, 
     username VARCHAR(255) NOT NULL, 
@@ -151,3 +150,24 @@ VALUES
     ('4','Nguyen Van Anh', 'Project Management', 'Notify students about missing attendance and how to restore it.'),
     ('5','Pham Thi Minh', 'SQL and Databases', ' Instructor to verify attendance if the student has a valid excuse.');
 
+
+
+
+CREATE TABLE listAttendance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL, 
+    course_id INT NOT NULL, 
+    schedule_id INT NOT NULL,  
+    attendance_date DATE NOT NULL, 
+    status ENUM('Present', 'On time') NOT NULL, 
+    note VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Sample data insertion
+INSERT INTO listAttendance (user_id, course_id, schedule_id, attendance_date, status, note)
+VALUES
+(1, 101, 1001, '2024-11-20', 'Present', 'Attended without issues'),
+(2, 102, 1002, '2024-11-21', 'On time', 'Logged in late but accepted'),
+(3, 103, 1003, '2024-11-22', 'Present', NULL),
+(4, 104, 1004, '2024-11-23', 'On time', 'Traffic delay noted');

@@ -1,8 +1,16 @@
 <?php
 include('db.php');
 
-// Lấy danh sách điểm danh từ cơ sở dữ liệu
-$sql = "SELECT * FROM attendance";
+// Lấy từ khóa tìm kiếm từ URL
+$searchKeyword = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+// Truy vấn cơ sở dữ liệu dựa trên từ khóa tìm kiếm
+if (!empty($searchKeyword)) {
+    $sql = "SELECT * FROM attendance WHERE user_id LIKE '%$searchKeyword%'";
+} else {
+    $sql = "SELECT * FROM attendance";
+}
+
 $result = $conn->query($sql);
 ?>
 
@@ -15,12 +23,12 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="manageAttendance.css"> <!-- Đường dẫn tới file CSS -->
 </head>
 <body>
-    <h2>Danh Sách Điểm Danh</h2>
-    
-    <!-- Nút Thêm bản ghi -->
-    <a href="Add_attendance.php">
-        <button>Add New Record</button>
-    </a>
+    <h2>Manage Attendance</h2>
+
+    <!-- Thanh điều hướng và tìm kiếm -->
+    <div class="header-bar">
+        <a href="Add_attendance.php"> <button>Add New Record</button></a>
+    </div>
 
     <!-- Bảng danh sách điểm danh -->
     <?php if ($result->num_rows > 0): ?>
@@ -46,16 +54,14 @@ $result = $conn->query($sql);
                     <td><?= $row["note"] ?></td>
                     <td>
                         <a href="Edit_attendance.php?id=<?= $row['id'] ?>" class="btn edit">Edit</a>
-                        <!-- Link xóa bản ghi -->
                         <a href="delete_attendance.php?id=<?= $row['id'] ?>" class="btn delete" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?');">Delete</a>
                     </td>
                 </tr>  
             <?php endwhile; ?>
         </table>
     <?php else: ?>
-        <p>Không có dữ liệu!</p>
+        <p>Không có dữ liệu phù hợp!</p>
     <?php endif; ?>
-
 </body>
 </html>
 
