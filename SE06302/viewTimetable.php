@@ -13,6 +13,11 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Timetable</title>
     <link rel="stylesheet" href="viewTimetable.css">
+    <style>
+    a[href="add_schedule.php"] {
+       background-color: #146e29;
+    }
+    </style>
 </head>
 <body>
     <h1>Student Timetable</h1>

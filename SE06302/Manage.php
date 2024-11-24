@@ -67,9 +67,9 @@
 
                 // Hiển thị nội dung tương ứng
                 switch ($page) {
-                    // case 'request':
-                    //     include 'manageRequest .php';
-                    //     break;
+                    case 'request':
+                        include 'manageRequest.php';
+                        break;
                     case 'students':
                         include 'manageStudents.php';
                         break;
@@ -79,14 +79,12 @@
                     case 'grades':
                         include 'manageGrades.php';
                         break;
-                    case 'timetable': // Bảng thời khóa biểu
+                    case 'timetable': 
                         include 'viewTimetable.php';
                         break;
-                    // case 'tuition': // Học phí
-                    //     include 'manageTuition.php';
-                    //     break;
-                    // default: // Hiển thị bảng thời khóa biểu mặc định
-                    //     include 'viewTimetable.php';
+                    case 'attendance': 
+                        include 'manageAttendance.php';
+                        break;
                 }
                 ?>
             </div>

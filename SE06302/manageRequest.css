@@ -1,0 +1,162 @@
+/* Reset CSS for the entire page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Add request form */
+.add-request {
+    margin-bottom: 30px;
+}
+
+.add-request h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #28a745; /* Color change on focus */
+    outline: none; /* Remove default outline */
+}
+
+form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Request list */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #272222;
+    color: #faf8f8;
+}
+
+table td {
+    background-color: #fff;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Hover effect for table rows */
+table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Button styling */
+a.btn {
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #110f0f 
+}
+
+a.btn:hover {
+    background-color: #45a049; /* Slightly darker shade on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .add-request h2 {
+        font-size: 18px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 14px;
+    }
+
+    a.btn {
+        width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .add-request h2 {
+        font-size: 16px;
+    }
+
+    form input, form textarea, form button {
+        font-size: 12px;
+    }
+
+    a.btn {
+        width: 100%; /* Full-width button on small screens */
+    }
+}

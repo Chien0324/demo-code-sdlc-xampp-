@@ -14,7 +14,7 @@
         }
 
         thead th {
-            background: #0a0a0a;
+            background: #302e2e;
         }
 
         a.btn, button {

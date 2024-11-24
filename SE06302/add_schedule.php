@@ -42,7 +42,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Timetable</title>
-    <link rel="stylesheet" href="add_schedule.css"> <!-- Liên kết với file CSS -->
+    <link rel="stylesheet" href="add_schedule.css"> 
+    <style>
+        body {
+         background-image: url('https://blog.topcv.vn/wp-content/uploads/2020/09/cong-nghe-thong-tin-la-gi-tn.jpg');
+         background-size: cover;
+         background-position: center;
+         background-attachment: fixed;
+    
+    }
+
+       .container {
+         width: 25%;
+    }
+    </style>
 </head>
 <body>
     <div class="container">  

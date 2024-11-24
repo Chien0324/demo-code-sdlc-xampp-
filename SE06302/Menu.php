@@ -19,7 +19,7 @@
             <a href="?page=timetable" class="nav-link link-dark">View Timetable.</a>
         </li>
         <li>
-            <a href="index.php?page=tuition" class="nav-link link-dark">Manage Tuition.</a>
+            <a href="?page=attendance" class="nav-link link-dark">Manage Attendance .</a>
         </li>
     </ul>
 </div>

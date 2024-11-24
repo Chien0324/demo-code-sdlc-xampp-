@@ -57,6 +57,17 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Timetable</title>
     <link rel="stylesheet" href="edit_schedule.css"> <!-- Liên kết với file CSS -->
+    <style>
+        body {
+            background-image: url('https://blog.topcv.vn/wp-content/uploads/2020/09/cong-nghe-thong-tin-la-gi-tn.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 525px;
+        } 
+    </style>
 </head>
 <body>
     <div class="container">  

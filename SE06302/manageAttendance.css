@@ -1,0 +1,107 @@
+/* Tổng quan thiết lập */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề */
+h1 {
+    text-align: center;
+    color: #db13a1;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+/* Bảng hiển thị */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Nút hành động */
+.btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3d8c40;
+}
+
+.btn.delete {
+    background-color: #dc3545;
+}
+
+.btn.delete:hover {
+    background-color: #b02a37;
+}
+
+/* Biểu mẫu */
+form {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea, button {
+    width: 12%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eff2f1;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #3d8c40;
+}
+
+/* Định dạng cột đặc biệt */
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 150px;
+}

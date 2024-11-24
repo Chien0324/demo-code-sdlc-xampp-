@@ -103,3 +103,51 @@ VALUES
 
 
 
+
+CREATE TABLE attendance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL, 
+    course_id INT NOT NULL, 
+    schedule_id INT NOT NULL, 
+    attendance_date DATE NOT NULL, 
+    status ENUM('Present', 'On time') NOT NULL, 
+    note VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (course_id) REFERENCES courses(id),
+    FOREIGN KEY (schedule_id) REFERENCES schedule(id)
+);
+
+
+INSERT INTO attendance (id, user_id, course_id, schedule_id, attendance_date, status, note)
+VALUES
+    (1, 1, 1, 2, '2024-11-13', 'Present', 'NO'),
+    (2, 2, 1, 2, '2024-11-14', 'Present', ''),
+    (3, 3, 1, 2, '2024-11-15', 'On time', ''),
+    (4, 4, 1, 2, '2024-11-16', 'Present', ''),
+    (5, 5, 1, 2, '2024-11-17', 'Present', ''),
+    (6, 6, 1, 2, '2024-11-18', 'On time',''),
+    (7, 7, 1, 2, '2024-11-19', 'Present', ''),
+    (8, 8, 1, 2, '2024-11-21', 'Present', ''),
+    (9, 9, 1, 2, '2024-11-22', 'Present', '');
+
+
+
+
+CREATE TABLE requests (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    username VARCHAR(255) NOT NULL, 
+    Courses VARCHAR(255) NOT NULL,
+    request_text TEXT NOT NULL, 
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+);
+
+
+INSERT INTO requests (id, username, Courses, request_text) 
+VALUES 
+    ('1','Do Ngoc trung', 'HTML Basics', 'Recover attendance that was missed due to absence.'),
+    ('2','Hoang Van Trung', 'Responsive Web Design', 'Automatically record attendance in online classes.'),
+    ('3','Vo Thi Hong', 'Project Management', 'Check and adjust attendance for past classes.'),
+    ('4','Nguyen Van Anh', 'Project Management', 'Notify students about missing attendance and how to restore it.'),
+    ('5','Pham Thi Minh', 'SQL and Databases', ' Instructor to verify attendance if the student has a valid excuse.');
+

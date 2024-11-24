@@ -67,7 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
       .R7 {
         text-decoration: none;
-      }           
+      }  
+
+      #form-container {
+        width: 45%;
+      }     
     </style>
 </head>
 <body>

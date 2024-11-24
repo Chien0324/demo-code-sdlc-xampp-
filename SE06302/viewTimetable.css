@@ -105,7 +105,7 @@ tr:hover {
 /* Add New Grade Button */
 a[href="add_schedule.php"] {
     display: inline-block;
-    background-color: #007bff;
+    background-color: #146e29;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
