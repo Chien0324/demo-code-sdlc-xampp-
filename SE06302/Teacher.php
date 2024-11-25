@@ -67,9 +67,6 @@
 
                 // Hiển thị nội dung tương ứng
                 switch ($page) {
-                    case 'request':
-                        include 'Teacher_add_request.php';
-                        break;
                     case 'courses':
                         include 'manageCourses_2.php';
                         break;

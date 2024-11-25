@@ -48,16 +48,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Sách Điểm Danh</title>
     <link rel="stylesheet" href="Teacher_manageAttendance.css"> <!-- Đường dẫn tới file CSS -->
-    
+    <style>
+    h2 {
+    color: #e212a4;
+    }
+    th {
+    background-color: black;
+    }
+    </style>
 </head>
 <body>
-    <h2>Manage Attendance</h2>
-
-    <!-- Thanh điều hướng và tìm kiếm -->
-    <div class="header-bar">
-        <input type="text" id="search" placeholder="Tìm kiếm theo User ID" value="<?= htmlspecialchars($searchKeyword) ?>">
-        <button onclick="searchData()">Search</button>
-    </div>
+    <h2>Attendance</h2>>
 
     <!-- Hiển thị thông báo nếu có -->
     <?php if (isset($msg)): ?>
@@ -94,24 +95,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
 
     <!-- Nút update thêm bản ghi -->
     <form method="POST">
-        <button type="submit" name="update" class="btn-update">Add Data to Table</button>
+        <button type="submit" name="update" class="btn-update">Update</button>
     </form>
-
-    <script>
-        // Hàm tìm kiếm bằng JavaScript
-        function searchData() {
-            const searchInput = document.getElementById('search').value.trim();
-            if (searchInput) {
-                window.location.href = `?search=${encodeURIComponent(searchInput)}`;
-            } else {
-                window.location.href = '?'; // Hiển thị toàn bộ dữ liệu khi ô tìm kiếm trống
-            }
-        }
-    </script>
 </body>
 </html>
 
 <?php 
 $conn->close();
 ?>
-

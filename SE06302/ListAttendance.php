@@ -28,7 +28,7 @@ $result = $stmt->get_result(); // Lấy kết quả từ câu truy vấn
     <link rel="stylesheet" href="manageAttendance.css"> <!-- Đường dẫn tới file CSS -->
 </head>
 <body>
-    <h2>Manage Attendance</h2>
+    <h2>Manage List Attendance</h2>
 
     <!-- Thanh điều hướng và tìm kiếm -->
     <div class="header-bar">

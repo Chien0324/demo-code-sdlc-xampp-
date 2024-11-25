@@ -5,7 +5,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="?page=request" class="nav-link link-dark">Submit request</a>
+            <a href="Student_add_request.php" class="nav-link link-dark">Submit request</a>
         </li>
             <a href="?page=courses" class="nav-link link-dark">Course</a>
         </li>

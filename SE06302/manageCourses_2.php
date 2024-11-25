@@ -9,7 +9,7 @@
     <title>Course Management</title>
 </head>
 <body>
-    <h1>Course Management</h1>
+    <h1>Course</h1>
     <table>
         <tr>
             <th>ID</th>

@@ -55,7 +55,7 @@ $conn->close();
             <input type="text" name="Courses" placeholder="Course" required>
             <textarea name="request_text" placeholder="Request Details" required></textarea>
             <button type="submit">Add Request</button>
-            <p class="text-center mt-3">Return to <a href="Teacher.php">Teacher</a></p>
+            <p class="text-center mt-3">Return to <a href="Student.php">Student</a></p>
         </form>
     </div>
 

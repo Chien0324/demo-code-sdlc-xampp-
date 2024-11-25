@@ -17,6 +17,9 @@ $result = $conn->query($sql);
     a[href="add_schedule.php"] {
        background-color: #146e29;
     }
+    h1 {
+    color: #e40dbd;
+    }
     </style>
 </head>
 <body>
