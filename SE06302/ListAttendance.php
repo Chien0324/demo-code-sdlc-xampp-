@@ -48,7 +48,6 @@ $result = $stmt->get_result(); // Lấy kết quả từ câu truy vấn
                     <th>Attendance Date</th>
                     <th>Status</th>
                     <th>Note</th>
-                    <th>Actions</th>
                 </tr>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <tr>
@@ -59,10 +58,6 @@ $result = $stmt->get_result(); // Lấy kết quả từ câu truy vấn
                         <td><?= $row["attendance_date"] ?></td>
                         <td><?= $row["status"] ?></td>
                         <td><?= $row["note"] ?></td>
-                        <td>
-                            <a href="Edit_attendance.php?id=<?= $row['id'] ?>" class="btn edit">Edit</a>
-                            <a href="delete_attendance.php?id=<?= $row['id'] ?>" class="btn delete" onclick="return confirm('Bạn có chắc chắn muốn xóa bản ghi này không?');">Delete</a>
-                        </td>
                     </tr>  
                 <?php endwhile; ?>
             </table>
