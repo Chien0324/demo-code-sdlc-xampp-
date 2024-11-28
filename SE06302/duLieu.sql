@@ -1,6 +1,6 @@
-CREATE DATABASE se06302_sdlc_17;
+CREATE DATABASE sdlc_asm;
 
-USE se06302_asm_sdlc;
+USE sdlc_asm;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,7 +37,6 @@ CREATE TABLE courses (
     name VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
     time TEXT NOT NULL ,
-    FOREIGN KEY (id) REFERENCES users(id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -56,53 +55,32 @@ VALUES
 
 
 
-CREATE TABLE Grades (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    gender ENUM('Male', 'Female') NOT NULL,
-    Courses VARCHAR(255) NOT NULL,
-    score FLOAT NOT NULL,
-    FOREIGN KEY (id) REFERENCES attendance(id),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-INSERT INTO Grades (id, username, gender, Courses, score) 
-VALUES
-    ('1','Do Ngoc Trung', 'Male','HTML Basics','9.5'),
-    ('2','Nguyen Van Anh', 'Male','Python for Web','8.7'),
-    ('3','Le Van Anh', 'Male','Python for Web','7.8'),
-    ('4','Pham Thi Minh', 'Female','HTML Basics','6.5'),
-    ('5','Hoang Van Trung', 'Male','HTML Basics','9.2'),
-    ('6','Doan Van Ung', 'Male','Project Management','8.0'),
-    ('7','Vo Thi Hong', 'Female','Project Management','7.5'),
-    ('8','Dang Van Thanh', 'Male','Project Management','6.8');
-
-
 
 CREATE TABLE schedule (
     id INT AUTO_INCREMENT PRIMARY KEY,
     birth_date DATE NOT NULL,          
     class VARCHAR(255) NOT NULL,       
     start_time TIME NOT NULL,          
-    end_time TIME NOT NULL,            
+    end_time TIME NOT NULL,   
+    course_id INT NOT NULL, 
     Courses VARCHAR(255) NOT NULL,     
-    activity VARCHAR(255) NOT NULL  
-    FOREIGN KEY (id) REFERENCES courses(id)
+    activity VARCHAR(255) NOT NULL,  
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
 );
 
 
-INSERT INTO schedule (id, birth_date, class, start_time, end_time, Courses, activity) 
+INSERT INTO schedule (id, birth_date, class, start_time, end_time, course_id, Courses, activity) 
 VALUES
-(1, '2024-11-12', 'BH0101', '07:15:00', '09:00:00', 'HTML Basics', 'Learn HTML tags and structure for web pages'),
-(2, '2024-11-12', 'BH0101', '09:30:00', '12:30:00', 'CSS Advanced', 'Explore advanced CSS concepts like Flexbox and Grid'),
-(3, '2024-11-12', 'BK0101', '07:15:00', '09:00:00', 'PHP for Beginners', 'Set up a PHP environment and learn basic syntax'),
-(4, '2024-11-12', 'BK0101', '09:30:00', '12:30:00', 'JavaScript Essentials', 'Understand variables, functions, and DOM manipulation'),
-(5, '2024-11-12', 'BK0101', '13:30:00', '16:30:00', 'Responsive Web Design', 'Implement media queries for mobile-friendly design'),
-(6, '2024-11-12', 'BH0201', '07:15:00', '11:15:00', 'SQL and Databases', 'Learn SQL commands and database normalization'),
-(7, '2024-11-12', 'BO0201', '09:30:00', '12:30:00', 'Full-Stack Development', 'Combine front-end and back-end skills'),
-(8, '2024-11-12', 'BO0201', '14:00:00', '17:15:00', 'Python for Web', 'Use Python with Flask to create web applications'),
-(9, '2024-11-12', 'BG0201', '11:00:00', '15:00:00', 'Web Security Basics', 'Understand common vulnerabilities like XSS and SQL injection'),
-(10, '2024-11-12', 'BJ0201', '14:00:00', '16:30:00', 'Project Management', 'Explore Agile methodologies and team collaboration tools');
+(1, '2024-11-12', 'BH0101', '07:15:00', '09:00:00', 1,'HTML Basics', 'Learn HTML tags and structure for web pages'),
+(2, '2024-11-12', 'BH0101', '09:30:00', '12:30:00', 2,'CSS Advanced', 'Explore advanced CSS concepts like Flexbox and Grid'),
+(3, '2024-11-12', 'BK0101', '07:15:00', '09:00:00', 3,'PHP for Beginners', 'Set up a PHP environment and learn basic syntax'),
+(4, '2024-11-12', 'BK0101', '09:30:00', '12:30:00', 4,'JavaScript Essentials', 'Understand variables, functions, and DOM manipulation'),
+(5, '2024-11-12', 'BK0101', '13:30:00', '16:30:00', 5,'Responsive Web Design', 'Implement media queries for mobile-friendly design'),
+(6, '2024-11-12', 'BH0201', '07:15:00', '11:15:00', 6,'SQL and Databases', 'Learn SQL commands and database normalization'),
+(7, '2024-11-12', 'BO0201', '09:30:00', '12:30:00', 7,'Full-Stack Development', 'Combine front-end and back-end skills'),
+(8, '2024-11-12', 'BO0201', '14:00:00', '17:15:00', 8,'Python for Web', 'Use Python with Flask to create web applications'),
+(9, '2024-11-12', 'BG0201', '11:00:00', '15:00:00', 9,'Web Security Basics', 'Understand common vulnerabilities like XSS and SQL injection'),
+(10, '2024-11-12', 'BJ0201', '14:00:00', '16:30:00', 10,'Project Management', 'Explore Agile methodologies and team collaboration tools');
 
 
 
@@ -115,14 +93,16 @@ CREATE TABLE attendance (
     attendance_date DATE NOT NULL, 
     status ENUM('Present', 'On time') NOT NULL, 
     note VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (schedule_id) REFERENCES schedule(id)
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE,
+    FOREIGN KEY (schedule_id) REFERENCES schedule(id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
 INSERT INTO attendance (id, user_id, course_id, schedule_id, attendance_date, status, note)
 VALUES
-    (1, 1, 1, 2, '2024-11-13', 'Present', 'NO'),
+    (1, 1, 1, 2, '2024-11-13', 'Present', ''),
     (2, 2, 1, 2, '2024-11-14', 'Present', ''),
     (3, 3, 1, 2, '2024-11-15', 'On time', ''),
     (4, 4, 1, 2, '2024-11-16', 'Present', ''),
@@ -131,6 +111,32 @@ VALUES
     (7, 7, 1, 2, '2024-11-19', 'Present', ''),
     (8, 8, 1, 2, '2024-11-21', 'Present', ''),
     (9, 9, 1, 2, '2024-11-22', 'Present', '');
+
+
+
+
+CREATE TABLE Grades (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    gender ENUM('Male', 'Female') NOT NULL,
+    course_id INT NOT NULL,
+    Courses VARCHAR(255) NOT NULL,
+    score FLOAT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_id) REFERENCES courses(id) ON DELETE CASCADE
+);
+
+INSERT INTO Grades (id, user_id, username, gender, course_id, Courses, score) 
+VALUES
+    ('1',1,'Do Ngoc Trung', 'Male',1,'HTML Basics','9.5'),
+    ('2',2,'Nguyen Van Anh', 'Male',8,'Python for Web','8.7'),
+    ('3',4,'Le Van Anh', 'Male',8,'Python for Web','7.8'),
+    ('4',5,'Pham Thi Minh', 'Female',1,'HTML Basics','6.5'),
+    ('5',6,'Hoang Van Trung', 'Male',1,'HTML Basics','9.2'),
+    ('6',8,'Doan Van Ung', 'Male',10,'Project Management','8.0'),
+    ('7',9,'Vo Thi Hong', 'Female',10,'Project Management','7.5'),
+    ('8',10,'Dang Van Thanh', 'Male',10,'Project Management','6.8');
 
 
 
@@ -163,11 +169,11 @@ CREATE TABLE listAttendance (
     attendance_date DATE NOT NULL, 
     status ENUM('Present', 'On time') NOT NULL, 
     note VARCHAR(255),
-    FOREIGN KEY (id) REFERENCES attendance(id),
+    FOREIGN KEY (schedule_id) REFERENCES schedule(id) ON DELETE CASCADE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Sample data insertion
+
 INSERT INTO listAttendance (id, user_id, course_id, schedule_id, attendance_date, status, note)
 VALUES
     (1, 1, 1, 2, '2024-11-13', 'Present', ''),

@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $month = $_POST['month'];
     $year = $_POST['year'];
     $class = $_POST['class'];
+    $course_id = $_POST['course_id'];
     $Courses = $_POST['Courses'];
     $start_time = $_POST['start_time'];
     $end_time = $_POST['end_time'];
@@ -18,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dob = $year . '-' . $month . '-' . $day;
 
     // Chuẩn bị câu lệnh SQL sử dụng prepared statements để tránh SQL injection
-    $stmt = $conn->prepare("INSERT INTO schedule (id, class, Courses, start_time, end_time, activity, birth_date) 
-                            VALUES (?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssss", $id, $class, $Courses, $start_time, $end_time, $activity, $dob);
+    $stmt = $conn->prepare("INSERT INTO schedule (id, class, course_id, Courses, start_time, end_time, activity, birth_date) 
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssss", $id, $class, $course_id, $Courses, $start_time, $end_time, $activity, $dob);
 
     // Kiểm tra nếu câu lệnh SQL thực thi thành công
     if ($stmt->execute()) {
@@ -84,6 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <label for="class">Class:</label>
             <input type="text" id="class" name="class" required>
+
+            <label for="id">Course ID:</label>
+            <input type="text" id="course_id" name="course_id" required>
 
             <label for="Courses">Course:</label>
             <input type="text" id="Courses" name="Courses" required>

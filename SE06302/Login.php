@@ -32,7 +32,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "se06302_sdlc_17";
+$dbname = "sdlc_asm";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

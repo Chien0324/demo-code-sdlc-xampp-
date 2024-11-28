@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "se06302_asm_sdlc";
+$dbname = "sdlc_asm";
 
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);

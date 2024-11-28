@@ -34,6 +34,7 @@ $result = $conn->query($sql);
             <th>ID</th>
             <th>Date of Birth</th>
             <th>Class</th>
+            <th>Course ID</th>
             <th>Course</th>
             <th>Start Time</th>
             <th>End Time</th>
@@ -50,6 +51,7 @@ $result = $conn->query($sql);
                 echo "<td>" . $row['id'] . "</td>";
                 echo "<td>" . date('d/m/Y', strtotime($birth_date)) . "</td>"; // Định dạng ngày tháng năm
                 echo "<td>" . $row['class'] . "</td>";
+                echo "<td>" . $row['course_id'] . "</td>";
                 echo "<td>" . $row['Courses'] . "</td>";
                 echo "<td>" . $row['start_time'] . "</td>";
                 echo "<td>" . $row['end_time'] . "</td>";

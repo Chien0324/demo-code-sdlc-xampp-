@@ -16,6 +16,7 @@ if (isset($_GET['id'])) {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Lấy dữ liệu từ form
             $class = $_POST['class'];
+            $course_id = $_POST['course_id'];
             $Courses = $_POST['Courses'];
             $start_time = $_POST['start_time'];
             $end_time = $_POST['end_time'];
@@ -95,6 +96,9 @@ if (isset($_GET['id'])) {
 
             <label for="class">Class:</label>
             <input type="text" id="class" name="class" value="<?php echo $row['class']; ?>" required>
+
+            <label for="id">Course ID:</label>
+            <input type="text" id="course_id" name="course_id" value="<?php echo $row['course_id']; ?>" readonly>
 
             <label for="Courses">Course:</label>
             <input type="text" id="Courses" name="Courses" value="<?php echo $row['Courses']; ?>" required>

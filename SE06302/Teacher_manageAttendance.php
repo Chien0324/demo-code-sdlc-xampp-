@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update'])) {
             $stmt->execute();
         }
     } else {
-        $msg = "Không có dữ liệu để thêm!";
+        $msg = "No data to add!";
     }
 }
 ?>

@@ -36,17 +36,18 @@ $conn->close();
     <link rel="stylesheet" href="add_request.css">
     <style>
         body{
-            background-image: url('https://blog.topcv.vn/wp-content/uploads/2020/09/cong-nghe-thong-tin-la-gi-tn.jpg');
+            background-image: url(https://blog.topcv.vn/wp-content/uploads/2020/09/cong-nghe-thong-tin-la-gi-tn.jpg);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+
     </style>
 </head>
 <body>
 
     <div class="add-request">
-        <h2>Add New Request</h2>
+        <h2>Add Request</h2>
         <form action="add_request.php" method="POST">
             <!-- Thêm trường ID cho phép người dùng nhập giá trị -->
             <input type="number" name="id" placeholder="ID" required>
@@ -54,9 +55,10 @@ $conn->close();
             <input type="text" name="Courses" placeholder="Course" required>
             <textarea name="request_text" placeholder="Request Details" required></textarea>
             <button type="submit">Add Request</button>
-            <p class="text-center mt-3">Return to <a href="Manage.php">Manage</a></p>
+            <p class="text-center mt-3">Return to <a href="Teacher.php">Teacher</a></p>
         </form>
     </div>
 
 </body>
 </html>
+

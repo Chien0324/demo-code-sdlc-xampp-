@@ -7,7 +7,7 @@
         <li class="nav-item">
             <a href="Teacher_add_request.php" class="nav-link link-dark">Submit request</a>
         </li>
-            <a href="?page=courses" class="nav-link link-dark">Course</a>
+            <a href="?page=grades" class="nav-link link-dark">Grades</a>
         </li>
         <li>
             <a href="?page=timetable" class="nav-link link-dark">Timetable</a>

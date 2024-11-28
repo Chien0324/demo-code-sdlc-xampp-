@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label>Score:</label>
             <input type="number" step="0.1" name="score" required>
             <button type="submit">Add Grade</button>
-            <p class="text-center mt-3">Updated course information? <a href="Manage.php">Manage</a></p>
+            <p class="text-center mt-3">Updated course information? <a href="Teacher.php">Teacher</a></p>
         </form>
     </div>
 </body>

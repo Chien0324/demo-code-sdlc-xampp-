@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Thực thi câu lệnh
     if ($stmt->execute()) {
-        header("Location: Manage.php");
+        header("Location: Student.php");
         exit(); // Đảm bảo chuyển hướng sau khi chèn thành công
     } else {
         echo "Thêm yêu cầu thất bại: " . $conn->error;
@@ -48,7 +48,7 @@ $conn->close();
 
     <div class="add-request">
         <h2>Add Request</h2>
-        <form action="add_request.php" method="POST">
+        <form action="" method="POST">
             <!-- Thêm trường ID cho phép người dùng nhập giá trị -->
             <input type="number" name="id" placeholder="ID" required>
             <input type="text" name="username" placeholder="Student Name" required>

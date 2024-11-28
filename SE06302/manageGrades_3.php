@@ -23,8 +23,8 @@
     </style>
 </head>
 <body>
-    <h1>Grade Management System</h1>
-    <a href="Add_grade.php" class="btn">Add New Grade</a>
+    <h1>Grade Management </h1>
+    <a href="Add_grade_3.php" class="btn">Add New Grade</a>
     <table>
         <thead>
             <tr>
@@ -52,8 +52,7 @@
                         <td>{$row['Courses']}</td>
                         <td>{$row['score']}</td>
                         <td>
-                            <a href='Edit_grade.php?id={$row['id']}' class='btn'>Edit</a>
-                            <a href='Delete_grade.php?id={$row['id']}' class='btn delete'>Delete</a>
+                            <a href='Edit_grade_3.php?id={$row['id']}' class='btn'>Edit</a>
                         </td>
                     </tr>";
             }

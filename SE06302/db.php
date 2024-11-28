@@ -2,7 +2,7 @@
 $host = 'localhost';
 $username = 'root'; // Thay bằng username thực tế
 $password = '';     // Thay bằng password thực tế
-$database = 'se06302_sdlc_17';
+$database = 'sdlc_Asm';
 
 $conn = new mysqli($host, $username, $password, $database);
 

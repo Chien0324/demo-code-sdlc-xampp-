@@ -67,8 +67,8 @@
 
                 // Hiển thị nội dung tương ứng
                 switch ($page) {
-                    case 'courses':
-                        include 'manageCourses_2.php';
+                    case 'grades':
+                        include 'manageGrades_3.php';
                         break;
                     case 'timetable': 
                         include 'viewTimetable_2.php';
