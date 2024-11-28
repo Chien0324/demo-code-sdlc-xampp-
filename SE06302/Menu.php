@@ -16,7 +16,7 @@
             <a href="?page=grades" class="nav-link link-dark">Manage Grades.</a>
         </li>
         <li>
-            <a href="?page=timetable" class="nav-link link-dark">View Timetable.</a>
+            <a href="?page=timetable" class="nav-link link-dark">Manage Timetable.</a>
         </li>
         <li>
             <a href="?page=attendance" class="nav-link link-dark">Manage Attendance.</a>

@@ -25,7 +25,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-    <h1>Student Timetable</h1>
+    <h1>Manage Timetable</h1>
     
     <a href="add_schedule.php">Add New Timetable</a>
     

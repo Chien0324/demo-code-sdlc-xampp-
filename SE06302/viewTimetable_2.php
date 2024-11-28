@@ -23,7 +23,7 @@ $result = $conn->query($sql);
     </style>
 </head>
 <body>
-    <h1>Student Timetable</h1>
+    <h1>Timetable</h1>
     
     <table border="1">
         <tr>

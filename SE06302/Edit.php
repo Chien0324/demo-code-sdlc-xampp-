@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->bind_param("ssiiissssi", $username, $gender, $day, $month, $year, $phone, $profession, $email, $hashed_password, $id);
 
             if ($stmt->execute()) {
-                $message = "<div class='alert alert-success mt-4'>Bạn đã sửa thông tin thành công!</div>";
+                $message = "<div class='alert alert-success mt-4'>You have successfully edited your information!</div>";
             } else {
                 $message = "<p class='text-danger'>Update failed. Please try again.</p>";
             }
@@ -132,6 +132,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="mb-3">
                         <label for="phone" class="form-label">Phone Number:</label>
                         <input type="tel" name="phone" id="phone" class="form-control" value="<?= $user['phone'] ?? '' ?>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Profession:</label>
+                        <div class="form-check">
+                            <input type="radio" name="profession" id="profession-student" value="Student" class="form-check-input" required>
+                            <label for="profession-student" class="form-check-label">Student</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="profession" id="profession-manager" value="Manager" class="form-check-input">
+                            <label for="profession-manager" class="form-check-label">Manage</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="profession" id="profession-teacher" value="Teacher" class="form-check-input">
+                            <label for="profession-teacher" class="form-check-label">Teacher</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="profession" id="profession-another" value="Another" class="form-check-input">
+                            <label for="profession-another" class="form-check-label">Another</label>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email:</label>
